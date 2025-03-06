@@ -1,342 +1,164 @@
+
+
 local url = "https://discord.gg/gZwkVxemSV"
 setclipboard(url)
 print("Discord url has been copied to your clipboard!")
 
--- RylorHub Fly Gui Hub (Modified UI) --
+-- RylorHub Fly Gui Hub --
 
 local main = Instance.new("ScreenGui")
 local Frame = Instance.new("Frame")
-local titleBar = Instance.new("Frame")
-local titleText = Instance.new("TextLabel")
-local closeButton = Instance.new("TextButton")
-local minimizeButton = Instance.new("TextButton")
-local controlsFrame = Instance.new("Frame")
 local up = Instance.new("TextButton")
 local down = Instance.new("TextButton")
 local onof = Instance.new("TextButton")
-local speedControls = Instance.new("Frame")
+local TextLabel = Instance.new("TextLabel")
 local plus = Instance.new("TextButton")
 local speed = Instance.new("TextLabel")
 local mine = Instance.new("TextButton")
+local closebutton = Instance.new("TextButton")
+local mini = Instance.new("TextButton")
+local mini2 = Instance.new("TextButton")
 
--- UI Configuration
-local COLOR_BACKGROUND = Color3.fromRGB(40, 40, 40)
-local COLOR_FOREGROUND = Color3.fromRGB(60, 60, 60)
-local COLOR_ACCENT = Color3.fromRGB(0, 120, 215)
-local COLOR_TEXT = Color3.fromRGB(255, 255, 255)
-
--- Main GUI
-main.Name = "RylorFly"
+main.Name = "main"
 main.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
 main.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 main.ResetOnSpawn = false
 
--- Main Frame
 Frame.Parent = main
-Frame.BackgroundColor3 = COLOR_BACKGROUND
-Frame.BorderSizePixel = 0
-Frame.Position = UDim2.new(0, 10, 0, 10)
-Frame.Size = UDim2.new(0, 160, 0, 160)
-Frame.ClipsDescendants = true
+Frame.BackgroundColor3 = Color3.fromRGB(102, 0, 204) -- Roxo
+Frame.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Frame.Position = UDim2.new(0.100320168, 0, 0.379746825, 0)
+Frame.Size = UDim2.new(0, 190, 0, 57)
 
--- Title Bar
-titleBar.Name = "TitleBar"
-titleBar.Parent = Frame
-titleBar.BackgroundColor3 = COLOR_ACCENT
-titleBar.Size = UDim2.new(1, 0, 0, 25)
-titleBar.ZIndex = 2
-
-titleText.Parent = titleBar
-titleText.BackgroundTransparency = 1
-titleText.Position = UDim2.new(0, 5, 0, 0)
-titleText.Size = UDim2.new(1, -50, 1, 0)
-titleText.Font = Enum.Font.GothamBold
-titleText.Text = "RylorHub Fly"
-titleText.TextColor3 = COLOR_TEXT
-titleText.TextSize = 14
-titleText.TextXAlignment = Enum.TextXAlignment.Left
-
--- Close Button
-closeButton.Name = "Close"
-closeButton.Parent = titleBar
-closeButton.BackgroundColor3 = COLOR_ACCENT
-closeButton.Position = UDim2.new(1, -25, 0, 0)
-closeButton.Size = UDim2.new(0, 25, 0, 25)
-closeButton.Font = Enum.Font.GothamBold
-closeButton.TextColor3 = COLOR_TEXT
-closeButton.Text = "×"
-closeButton.TextSize = 18
-
--- Minimize Button
-minimizeButton.Name = "Minimize"
-minimizeButton.Parent = titleBar
-minimizeButton.BackgroundColor3 = COLOR_ACCENT
-minimizeButton.Position = UDim2.new(1, -50, 0, 0)
-minimizeButton.Size = UDim2.new(0, 25, 0, 25)
-minimizeButton.Font = Enum.Font.GothamBold
-minimizeButton.TextColor3 = COLOR_TEXT
-minimizeButton.Text = "-"
-minimizeButton.TextSize = 18
-
--- Controls Frame
-controlsFrame.Parent = Frame
-controlsFrame.BackgroundTransparency = 1
-controlsFrame.Position = UDim2.new(0, 0, 0, 30)
-controlsFrame.Size = UDim2.new(1, 0, 1, -30)
-
--- Up/Down Controls
-up.Name = "Up"
-up.Parent = controlsFrame
-up.BackgroundColor3 = COLOR_FOREGROUND
-up.Position = UDim2.new(0.5, -20, 0, 10)
-up.Size = UDim2.new(0, 40, 0, 30)
-up.Font = Enum.Font.GothamBold
+up.Name = "up"
+up.Parent = Frame
+up.BackgroundColor3 = Color3.fromRGB(102, 0, 204) -- Roxo
+up.Size = UDim2.new(0, 44, 0, 28)
+up.Font = Enum.Font.SourceSans
 up.Text = "↑"
-up.TextColor3 = COLOR_TEXT
-up.TextSize = 18
+up.TextColor3 = Color3.fromRGB(0, 0, 0) -- Preto
+up.TextSize = 14.000
 
-down.Name = "Down"
-down.Parent = controlsFrame
-down.BackgroundColor3 = COLOR_FOREGROUND
-down.Position = UDim2.new(0.5, -20, 0, 45)
-down.Size = UDim2.new(0, 40, 0, 30)
-up.Font = Enum.Font.GothamBold
+down.Name = "down"
+down.Parent = Frame
+down.BackgroundColor3 = Color3.fromRGB(102, 0, 204) -- Roxo
+down.Position = UDim2.new(0, 0, 0.491228074, 0)
+down.Size = UDim2.new(0, 44, 0, 28)
+down.Font = Enum.Font.SourceSans
 down.Text = "↓"
-down.TextColor3 = COLOR_TEXT
-down.TextSize = 18
+down.TextColor3 = Color3.fromRGB(0, 0, 0) -- Preto
+down.TextSize = 14.000
 
--- Speed Controls
-speedControls.Name = "SpeedControls"
-speedControls.Parent = controlsFrame
-speedControls.BackgroundTransparency = 1
-speedControls.Position = UDim2.new(0, 10, 0, 90)
-speedControls.Size = UDim2.new(1, -20, 0, 40)
+onof.Name = "onof"
+onof.Parent = Frame
+onof.BackgroundColor3 = Color3.fromRGB(102, 0, 204) -- Roxo
+onof.Position = UDim2.new(0.702823281, 0, 0.491228074, 0)
+onof.Size = UDim2.new(0, 56, 0, 28)
+onof.Font = Enum.Font.Michroma
+onof.Text = "Fly"
+onof.TextColor3 = Color3.fromRGB(0, 0, 0) -- Preto
+onof.TextSize = 14.000
 
-plus.Name = "Plus"
-plus.Parent = speedControls
-plus.BackgroundColor3 = COLOR_FOREGROUND
-plus.Size = UDim2.new(0, 40, 0, 40)
-plus.Font = Enum.Font.GothamBold
-plus.Text = "+"
-plus.TextColor3 = COLOR_TEXT
-plus.TextSize = 20
-
-speed.Name = "Speed"
-speed.Parent = speedControls
-speed.BackgroundTransparency = 1
-speed.Position = UDim2.new(0, 50, 0, 0)
-speed.Size = UDim2.new(0, 60, 1, 0)
-speed.Font = Enum.Font.GothamBold
-speed.Text = "1"
-speed.TextColor3 = COLOR_TEXT
-speed.TextSize = 18
-
-mine.Name = "Mine"
-mine.Parent = speedControls
-mine.BackgroundColor3 = COLOR_FOREGROUND
-mine.Position = UDim2.new(1, -40, 0, 0)
-mine.Size = UDim2.new(0, 40, 0, 40)
-mine.Font = Enum.Font.GothamBold
-mine.Text = "-"
-mine.TextColor3 = COLOR_TEXT
-mine.TextSize = 20
-
--- Toggle Button
-onof.Name = "Toggle"
-onof.Parent = controlsFrame
-onof.BackgroundColor3 = COLOR_ACCENT
-onof.Position = UDim2.new(0.5, -40, 1, -40)
-onof.Size = UDim2.new(0, 80, 0, 30)
-onof.Font = Enum.Font.GothamBold
-onof.Text = "TOGGLE FLY"
-onof.TextColor3 = COLOR_TEXT
-onof.TextSize = 14
-
--- Add rounded corners
-local function addCorner(parent)
-    local corner = Instance.new("UICorner")
-    corner.CornerRadius = UDim.new(0, 4)
-    corner.Parent = parent
-end
-
-addCorner(Frame)
-addCorner(titleBar)
-addCorner(up)
-addCorner(down)
-addCorner(plus)
-addCorner(mine)
-addCorner(onof)
-addCorner(closeButton)
-addCorner(minimizeButton)
-
--- Rest of the original functionality remains the same below this line
--- [Include all the original functional code starting from line 143]
--- ... (Keep all the original script functionality unchanged)
-
--- Only modify the UI structure and properties above, keep the functionality below
-
+TextLabel.Parent = Frame
+TextLabel.BackgroundColor3 = Color3.fromRGB(102, 0, 204) -- Roxo
+TextLabel.Position = UDim2.new(0.469327301, 0, 0, 0)
+TextLabel.Size = UDim2.new(0, 100, 0, 28)
+TextLabel.Font = Enum.Font.Michroma
+TextLabel.Text = "Script Made By RylorHub"
+TextLabel.TextColor3 = Color3.fromRGB(0, 0, 0) -- Preto
+TextLabel.TextScaled = true
+TextLabel.TextSize = 14.000
+TextLabel.TextWrapped = true
 
 plus.Name = "plus"
-
 plus.Parent = Frame
-
-plus.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-
+plus.BackgroundColor3 = Color3.fromRGB(102, 0, 204) -- Roxo
 plus.Position = UDim2.new(0.231578946, 0, 0, 0)
-
 plus.Size = UDim2.new(0, 45, 0, 28)
-
 plus.Font = Enum.Font.SourceSans
-
 plus.Text = "+"
-
-plus.TextColor3 = Color3.fromRGB(0, 0, 0)
-
+plus.TextColor3 = Color3.fromRGB(0, 0, 0) -- Preto
 plus.TextScaled = true
-
 plus.TextSize = 14.000
-
 plus.TextWrapped = true
 
- 
-
 speed.Name = "speed"
-
 speed.Parent = Frame
-
-speed.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-
+speed.BackgroundColor3 = Color3.fromRGB(102, 0, 204) -- Roxo
 speed.Position = UDim2.new(0.468421042, 0, 0.491228074, 0)
-
 speed.Size = UDim2.new(0, 44, 0, 28)
-
 speed.Font = Enum.Font.SourceSans
-
 speed.Text = "1"
-
-speed.TextColor3 = Color3.fromRGB(0, 0, 0)
-
+speed.TextColor3 = Color3.fromRGB(0, 0, 0) -- Preto
 speed.TextScaled = true
-
 speed.TextSize = 14.000
-
 speed.TextWrapped = true
 
- 
-
 mine.Name = "mine"
-
 mine.Parent = Frame
-
-mine.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-
+mine.BackgroundColor3 = Color3.fromRGB(102, 0, 204) -- Roxo
 mine.Position = UDim2.new(0.231578946, 0, 0.491228074, 0)
-
 mine.Size = UDim2.new(0, 45, 0, 29)
-
 mine.Font = Enum.Font.SourceSans
-
 mine.Text = "-"
-
-mine.TextColor3 = Color3.fromRGB(0, 0, 0)
-
+mine.TextColor3 = Color3.fromRGB(0, 0, 0) -- Preto
 mine.TextScaled = true
-
 mine.TextSize = 14.000
-
 mine.TextWrapped = true
 
- 
-
 closebutton.Name = "Close"
-
 closebutton.Parent = main.Frame
-
-closebutton.BackgroundColor3 = Color3.fromRGB(255, 5, 5)
-
+closebutton.BackgroundColor3 = Color3.fromRGB(102, 0, 204) -- Roxo
 closebutton.Font = "Michroma"
-
 closebutton.Size = UDim2.new(0, 45, 0, 28)
-
 closebutton.Text = "x"
-
+closebutton.TextColor3 = Color3.fromRGB(0, 0, 0) -- Preto
 closebutton.TextSize = 30
-
 closebutton.Position = UDim2.new(0, 0, -1, 27)
 
- 
-
 mini.Name = "minimize"
-
 mini.Parent = main.Frame
-
-mini.BackgroundColor3 = Color3.fromRGB(117, 117, 117)
-
+mini.BackgroundColor3 = Color3.fromRGB(102, 0, 204) -- Roxo
 mini.Font = "Michroma"
-
 mini.Size = UDim2.new(0, 45, 0, 28)
-
 mini.Text = "-"
-
+mini.TextColor3 = Color3.fromRGB(0, 0, 0) -- Preto
 mini.TextSize = 40
-
 mini.Position = UDim2.new(0, 44, -1, 27)
 
- 
-
 mini2.Name = "minimize2"
-
 mini2.Parent = main.Frame
-
-mini2.BackgroundColor3 = Color3.fromRGB(117, 117, 117)
-
+mini2.BackgroundColor3 = Color3.fromRGB(102, 0, 204) -- Roxo
 mini2.Font = "SourceSans"
-
 mini2.Size = UDim2.new(0, 45, 0, 28)
-
 mini2.Text = "+"
-
+mini2.TextColor3 = Color3.fromRGB(0, 0, 0) -- Preto
 mini2.TextSize = 40
-
 mini2.Position = UDim2.new(0, 44, -1, 57)
-
 mini2.Visible = false
 
- 
-
+-- O restante do código permanece igual a partir daqui...
 speeds = 1
-
- 
 
 local speaker = game:GetService("Players").LocalPlayer
 
- 
-
 local chr = game.Players.LocalPlayer.Character
-
 local hum = chr and chr:FindFirstChildWhichIsA("Humanoid")
-
- 
 
 nowe = false
 
- 
-
-
-
 wait(1.2)
 game.StarterGui:SetCore("SendNotification", {
-Title = "Welcome"; -- the title (ofc)
-Text = "Script Made By RylorHub"; -- what the text says (ofc)
-Icon = ""; -- the image if u want. 
-Duration = 5; -- how long the notification should in secounds
+    Title = "Welcome";
+    Text = "Script Made By RylorHub";
+    Icon = "";
+    Duration = 5;
 })
 
- 
-
-Frame.Active = true -- main = gui
-
+Frame.Active = true
 Frame.Draggable = true
+
+-- [...] (O restante do código de funcionalidade permanece inalterado)
 
  
 
