@@ -1,6 +1,6 @@
 
 
-local url = "https://discord.gg/gZwkVxemSV"
+local url = "22"
 setclipboard(url)
 print("Discord url has been copied to your clipboard!")
 
@@ -64,7 +64,7 @@ TextLabel.BackgroundColor3 = Color3.fromRGB(102, 0, 204) -- Roxo
 TextLabel.Position = UDim2.new(0.469327301, 0, 0, 0)
 TextLabel.Size = UDim2.new(0, 100, 0, 28)
 TextLabel.Font = Enum.Font.Michroma
-TextLabel.Text = "Script Made By RylorHub"
+TextLabel.Text = "ZOOOM"
 TextLabel.TextColor3 = Color3.fromRGB(0, 0, 0) -- Preto
 TextLabel.TextScaled = true
 TextLabel.TextSize = 14.000
